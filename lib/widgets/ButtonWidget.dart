@@ -11,16 +11,32 @@ class ButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // return VxBox(
+    //   child: MaterialButton(
+    //     onPressed: () {},
+    //     color: color,
+    //     height: 50,
+    //     child: buttonText.text
+    //         .color(color == Colors.black ? Colors.white : Colors.black)
+    //         .make()
+    //         .centered(),
+    //   ),
+    // );
+
     return VxBox(
-            child: buttonText.text
-                .color(color == Colors.black ? Colors.white : Colors.black)
-                .make()
-                .centered())
+      child: MaterialButton(
+        onPressed: () {},
+        color: color,
+        height: 50,
+        child: buttonText.text
+            .color(color == Colors.black ? Colors.white : Colors.black)
+            .make()
+            .centered(),
+      ),
+    )
         .height(50)
         .width(size.width * 0.85)
-        .border()
         .margin(EdgeInsets.only(bottom: 15))
-        .color(color)
         .makeCentered();
   }
 }

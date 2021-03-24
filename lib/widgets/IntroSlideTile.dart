@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class IntroSlideTile extends StatelessWidget {
@@ -30,7 +29,7 @@ class IntroSlideTile extends StatelessWidget {
                   .text
                   .center
                   .xl5
-                  .textStyle(GoogleFonts.dmSerifText())
+                  // .textStyle(GoogleFonts.dmSerifText())
                   .black
                   .make()
                   .centered(),

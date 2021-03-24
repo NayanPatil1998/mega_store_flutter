@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:mega_store/Fixtures/IntroSlidesData.dart';
 import 'package:mega_store/widgets/ButtonWidget.dart';
 import 'package:mega_store/widgets/IntroSlideTile.dart';
