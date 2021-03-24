@@ -2,12 +2,14 @@ import "package:flutter/material.dart";
 import 'package:velocity_x/velocity_x.dart';
 
 class ButtonWidget extends StatelessWidget {
-  const ButtonWidget({Key key, this.size, this.buttonText, this.color})
+  const ButtonWidget(
+      {Key key, this.size, this.buttonText, this.color, this.onPressed})
       : super(key: key);
 
   final Size size;
   final String buttonText;
   final Color color;
+  final Function onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class ButtonWidget extends StatelessWidget {
 
     return VxBox(
       child: MaterialButton(
-        onPressed: () {},
+        onPressed: onPressed,
         color: color,
         height: 50,
         child: buttonText.text
