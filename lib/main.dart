@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mega_store/screens/Home.dart';
 import 'package:mega_store/screens/IntroScreen.dart';
 
 void main() {
@@ -10,10 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Mega Store',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: IntroScreen());
+      title: 'Mega Store',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: Home(),
+    );
   }
 }
