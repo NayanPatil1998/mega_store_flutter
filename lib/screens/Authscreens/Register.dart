@@ -4,12 +4,12 @@ import 'package:mega_store/widgets/ButtonWidget.dart';
 import 'package:mega_store/widgets/TextFieldContainer.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-class LoginScreen extends StatefulWidget {
+class RegisterScreen extends StatefulWidget {
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _RegisterScreenState createState() => _RegisterScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -34,7 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               VStack(
                 [
-                  "Welcome to Login"
+                  "Welcome to Register"
                       .text
                       .center
                       .bold
@@ -45,7 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(
                     height: 10,
                   ),
-                  "Please enter below details to login \n to your account"
+                  "Please enter below details to register \n  your account"
                       .text
                       .center
                       .gray700
@@ -58,6 +58,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Form(
                   child: VStack(
                     [
+                      TextFieldWidget(
+                        size: size,
+                        hintText: "Name",
+                        secured: false,
+                        icon: Icons.person,
+                        onChanged: (value) => {},
+                      ),
                       TextFieldWidget(
                         size: size,
                         hintText: "Email",
@@ -78,22 +85,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       ButtonWidget(
                         color: Colors.black,
                         onPressed: () {},
-                        buttonText: "Login",
+                        buttonText: "Register",
                         size: size,
                       ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      InkWell(
-                        onTap: () {},
-                        child: "Forgot Password ?"
-                            .text
-                            .black
-                            .bold
-                            .medium
-                            .make()
-                            .centered(),
-                      )
                     ],
                   ),
                 ),
@@ -105,7 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   )
                   .make()
                   .centered(),
-              "Or Login with:".text.gray400.make().centered(),
+              "Or Register with:".text.gray400.make().centered(),
               HStack(
                 [
                   Expanded(
@@ -160,12 +154,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   )
                 ],
               ).py24().px24(),
-              "Didn't have an account? Create Account"
-                  .text
-                  .black
-                  .medium
-                  .make()
-                  .centered()
+              "Have an account? Login".text.black.medium.make().centered()
             ],
           ).py24().scrollVertical()),
     );
