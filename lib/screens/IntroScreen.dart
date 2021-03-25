@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mega_store/Fixtures/IntroSlidesData.dart';
 import 'package:mega_store/screens/Authscreens/Login.dart';
+import 'package:mega_store/screens/Authscreens/Register.dart';
 import 'package:mega_store/widgets/ButtonWidget.dart';
 import 'package:mega_store/widgets/IntroSlideTile.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -74,7 +76,7 @@ class _IntroScreenState extends State<IntroScreen> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(
+                CupertinoPageRoute(
                   builder: (context) => LoginScreen(),
                 ),
               );
@@ -87,8 +89,8 @@ class _IntroScreenState extends State<IntroScreen> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                  builder: (context) => LoginScreen(),
+                CupertinoPageRoute(
+                  builder: (context) => RegisterScreen(),
                 ),
               );
             },

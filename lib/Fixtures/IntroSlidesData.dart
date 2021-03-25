@@ -7,10 +7,10 @@ List<SliderDataModel> slidesData = [
   ),
   SliderDataModel(
     imageUrl: "assets/Images/girl2.png",
-    caption: "Discover the Latest \n Women wears",
+    caption: "Discover the Latest \n Jewelary",
   ),
   SliderDataModel(
     imageUrl: "assets/Images/girl3.png",
-    caption: "Discover the Latest \n Women wears",
+    caption: "Discover the Latest \n Electronics",
   )
 ];
