@@ -6,7 +6,7 @@ import 'package:mega_store/models/Product.model.dart';
 import 'package:mega_store/models/category.model.dart';
 
 class HttpService {
-  final String baseUrl = "http://192.168.56.66:8080/api";
+  final String baseUrl = "http://192.168.56.1:8080/api";
   Client client = Client();
 
   Future<List<CategoryModel>> getCategories() async {
