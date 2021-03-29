@@ -23,6 +23,21 @@ class HttpService {
     }
   }
 
+  Future<List<ProductModel>> getProductsByCategory(String category) async {
+    Response res =
+        await client.get(Uri.parse('${this.baseUrl}/products/$category'));
+    print(res);
+//
+    if (res.statusCode == 200) {
+      List<dynamic> body = jsonDecode(res.body);
+      List<ProductModel> products =
+          body.map((dynamic item) => ProductModel.fromJson(item)).toList();
+      return products;
+    } else {
+      throw "Failed to load products list";
+    }
+  }
+
   Future<List<ProductModel>> getFeaturedProducts() async {
     Response res = await client.get(Uri.parse('${this.baseUrl}/featproducts'));
 //
@@ -32,7 +47,7 @@ class HttpService {
           body.map((dynamic item) => ProductModel.fromJson(item)).toList();
       return products;
     } else {
-      throw "Failed to load cases list";
+      throw "Failed to load products list";
     }
   }
 }

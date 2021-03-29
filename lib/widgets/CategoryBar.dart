@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mega_store/models/category.model.dart';
+import 'package:mega_store/screens/CategoryScreen.dart';
 import 'package:mega_store/services/httpServices.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -14,23 +16,39 @@ class HomeCategoryRow extends StatelessWidget {
     return futureList;
   }
 
-  List<Widget> buildWidgets(dynamic data) {
+  List<Widget> buildWidgets(dynamic data, BuildContext context) {
     List<Widget> list = [];
     data.forEach((element) => {
-          list.add(VxBox(
-            child: VStack(
-              [
-                Image.network(
-                  element.imageUrl,
-                  width: 120,
-                  height: 80,
-                  fit: BoxFit.cover,
+          list.add(
+            VxBox(
+              child: VStack(
+                [
+                  Image.network(
+                    element.imageUrl,
+                    width: 120,
+                    height: 80,
+                    fit: BoxFit.cover,
+                  ),
+                  "${element.category}".text.black.medium.bold.make().centered()
+                ],
+                alignment: MainAxisAlignment.spaceBetween,
+              ),
+            )
+                .height(120)
+                .width(120)
+                .margin(EdgeInsets.only(right: 15))
+                .make()
+                .onInkTap(() {
+              Navigator.push(
+                context,
+                CupertinoPageRoute(
+                  builder: (context) => CategoryScreen(
+                    category: element.category,
+                  ),
                 ),
-                "${element.category}".text.black.medium.bold.make().centered()
-              ],
-              alignment: MainAxisAlignment.spaceBetween,
-            ),
-          ).height(120).width(120).margin(EdgeInsets.only(right: 15)).make())
+              );
+            }),
+          )
         });
     return list;
   }
@@ -53,7 +71,7 @@ class HomeCategoryRow extends StatelessWidget {
             if (snapshot.hasData) {
               return ListView(
                 scrollDirection: Axis.horizontal,
-                children: buildWidgets(snapshot.data),
+                children: buildWidgets(snapshot.data, context),
               );
             } else if (snapshot.hasError) {
               return snapshot.error
