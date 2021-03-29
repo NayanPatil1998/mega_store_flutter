@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mega_store/screens/Home.dart';
-import 'package:mega_store/screens/IntroScreen.dart';
 
 void main() {
   runApp(MyApp());

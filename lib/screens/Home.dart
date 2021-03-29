@@ -1,14 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_icons/flutter_icons.dart';
-import 'package:mega_store/models/Product.model.dart';
-import 'package:mega_store/models/category.model.dart';
-import 'package:mega_store/services/httpServices.dart';
-import 'package:mega_store/widgets/CategoryBar.dart';
+
 import 'package:mega_store/widgets/DefaultAppbar.dart';
 import 'package:mega_store/widgets/HomeComponents/HomeScreen.dart';
-import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
+// import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class Home extends StatefulWidget {
@@ -17,11 +13,11 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  PersistentTabController _controller =
-      PersistentTabController(initialIndex: 0);
-  List<Widget> _buildScreens() {
-    return [HomeScreen(), Container(), Container(), Container()];
-  }
+  // PersistentTabController _controller =
+  //     PersistentTabController(initialIndex: 0);
+  // List<Widget> _buildScreens() {
+  //   return [HomeScreen(), Container(), Container(), Container()];
+  // }
 
   // List<PersistentBottomNavBarItem> _navBarsItems() {
   //   return [
