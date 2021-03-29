@@ -9,6 +9,7 @@ class TextFieldWidget extends StatelessWidget {
     this.icon,
     this.secured,
     this.onChanged,
+    this.validator,
   }) : super(key: key);
 
   final Size size;
@@ -16,6 +17,7 @@ class TextFieldWidget extends StatelessWidget {
   final IconData icon;
   final bool secured;
   final Function onChanged;
+  final Function validator;
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +33,7 @@ class TextFieldWidget extends StatelessWidget {
           Expanded(
             child: TextFormField(
               obscureText: secured,
+              validator: validator,
               onChanged: onChanged,
               cursorColor: Vx.gray800,
               decoration: InputDecoration(
@@ -45,7 +48,8 @@ class TextFieldWidget extends StatelessWidget {
       ),
     )
         .border(color: Vx.gray200)
-        .height(50)
+        .height(60)
+        .padding(EdgeInsets.symmetric(vertical: 5))
         .width(size.width)
         .margin(EdgeInsets.only(bottom: 10))
         .make();

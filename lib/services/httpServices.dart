@@ -50,4 +50,18 @@ class HttpService {
       throw "Failed to load products list";
     }
   }
+
+  Future postUserData(String email, String name, String uid) async {
+    Response res =
+        await client.post(Uri.parse('${this.baseUrl}/adduser'), headers: {
+      "Content-Type": "application/json",
+      'Accept': 'application/json',
+      "Authorization": "Bearer ${uid}"
+    }, body: {
+      "name": name,
+      "email": email,
+      "uid": uid,
+    });
+    return res.statusCode;
+  }
 }

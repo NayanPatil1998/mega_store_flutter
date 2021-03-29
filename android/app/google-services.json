@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "203231710775",
+    "project_id": "mega-shop-8333e",
+    "storage_bucket": "mega-shop-8333e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203231710775:android:cf5510018d6a11d161f9b2",
+        "android_client_info": {
+          "package_name": "com.example.mega_store"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "203231710775-gn3lkr3pjrqfm3bq1jb2o3rq02h0bi9d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mega_store",
+            "certificate_hash": "22efd51bf812041795c56165c4f07724753dab14"
+          }
+        },
+        {
+          "client_id": "203231710775-srr3bv2p9ashicnusb3lsaa4nchb6aej.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPduUwvuiCiM-xDFz_uhaZwRU5TfqP1U0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "203231710775-srr3bv2p9ashicnusb3lsaa4nchb6aej.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
