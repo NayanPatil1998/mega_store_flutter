@@ -6,7 +6,7 @@ import 'package:mega_store/models/Product.model.dart';
 import 'package:mega_store/models/category.model.dart';
 
 class HttpService {
-  final String baseUrl = "http://192.168.56.1:8080/api";
+  final String baseUrl = "http://192.168.56.66:8080/api";
   Client client = Client();
 
   Future<List<CategoryModel>> getCategories() async {
@@ -21,6 +21,19 @@ class HttpService {
     } else {
       throw "Failed to load cases list";
     }
+  }
+
+  Future<String> createUser(String email, String name, String password) async {
+    Response res =
+        await client.post(Uri.parse('${this.baseUrl}/adduser'), headers: {
+      "Content-Type": "application/json",
+      'Accept': 'application/json',
+    }, body: {
+      "name": name,
+      "email": email,
+      "password": password,
+    });
+    return res.body;
   }
 
   Future<List<ProductModel>> getProductsByCategory(String category) async {

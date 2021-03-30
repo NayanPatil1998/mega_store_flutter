@@ -24,6 +24,15 @@ class AuthService {
     // .map((FirebaseUser user) => _userFromFirebaseser(user));
   }
 
+  Future signInWithToken(String token) async {
+    try {
+      UserCredential result = await _auth.signInWithCustomToken(token);
+      return result;
+    } catch (e) {
+      return e;
+    }
+  }
+
   Future signUpwithEmail(String email, String password, String name) async {
     try {
       print(email);
@@ -64,6 +73,14 @@ class AuthService {
       return userFromFirebaseUser(user);
     } catch (e) {
       return e;
+    }
+  }
+
+  Future signOut() async {
+    try {
+      return await _auth.signOut();
+    } catch (e) {
+      print(e.toString());
     }
   }
 }

@@ -5,12 +5,6 @@ import 'package:velocity_x/velocity_x.dart';
 AppBar defaulttAppbar(String title, bool isForHome) {
   return AppBar(
     backgroundColor: Colors.white,
-    leading: isForHome
-        ? Icon(
-            Icons.menu,
-            color: Vx.black,
-          )
-        : null,
     elevation: 0,
     centerTitle: true,
     title: title.text.uppercase.black.make(),

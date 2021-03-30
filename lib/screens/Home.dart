@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import 'package:mega_store/widgets/DefaultAppbar.dart';
+import 'package:mega_store/widgets/DraweWidget.dart';
 import 'package:mega_store/widgets/HomeComponents/HomeScreen.dart';
 // import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -54,6 +55,7 @@ class _HomeState extends State<Home> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
         backgroundColor: Vx.white,
+        drawer: DrawerWidget(),
         appBar: defaulttAppbar("MEGA STORE", true),
         body: HomeScreen()
         // PersistentTabView(

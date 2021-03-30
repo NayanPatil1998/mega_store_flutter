@@ -1,9 +1,6 @@
-import 'dart:ffi';
-
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:mega_store/models/user.model.dart';
-import 'package:mega_store/screens/Home.dart';
+
 import 'package:mega_store/services/AuthService.dart';
 import 'package:mega_store/wrapper.dart';
 import 'package:provider/provider.dart';
